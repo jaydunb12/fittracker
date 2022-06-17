@@ -1,0 +1,44 @@
+
+<%- include('partials/header') %>
+
+<main id="site-main" style="height: 70vh;">
+    <div class="container">
+        <div class="box-nav d-flex-justify-between">
+            <a href="/">
+                <span>BACK   <i class="fa fa-backward"></i></span>
+            </a>
+        </div>
+
+        <form action="/workout/<%=workout._id%>?_method=PUT" method="POST">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Username</th>
+                        <th>Exercise</th>
+                        <th>Duration</th>
+                        <th>Mood</th>
+                        <th>Action</th>
+       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input value="<%=workout.username%>" style="background-color: transparent; width: 110px; border-radius: 1px; text-align: center;" type="text" id="username" name="username" placeholder="username"></td>
+                        <td><input value="<%=workout.exercise%>"  style="background-color: transparent; width: 110px; border-radius: 1px; text-align: center;" class="input" type="text" id="exercise" name="exercise" placeholder="exercise"></td>
+                        <td><input value="<%=workout.duration%>"  style="background-color: transparent; width: 110px; border-radius: 1px; text-align: center;" class="input" type="number" id="duration" name="duration" placeholder="duration"></td>
+                        <td><input value="<%=workout.mood%>"  style="background-color: transparent; width: 110px; border-radius: 1px; text-align: center;" class="input" type="text" id="mood" name="mood" placeholder="mood"></td>
+                        <td>
+                            <button class="btn border-shadow update">
+                                SUBMIT
+                            </button>
+                         </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+     
+    </div>
+</main>
+
+
+<%- include('partials/footer') %>

@@ -1,0 +1,40 @@
+<%- include('partials/header') %>
+
+
+<main id="site-main" style="height: 70vh;">
+    <div class="container">
+        <div class="box-nav d-flex-justify-between">
+            <a href="/new">
+                <span>New Workout  <i class="fa fa-plus-circle"></i></i></span>
+            </a>
+        </div>
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Username</th>
+                        <th>Exercise</th>
+                        <th>Duration</th>
+                        <th>Mood</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+
+                        <tr>
+                            <td><%=workouts.username %></td>
+                            <td><%=workouts.exercise%></td>
+                            <td><%=workouts.duration%></td>
+                            <td><%=workouts.mood%></td>
+                         
+                        </tr>
+                       
+                </tbody>
+            </table>
+       
+    </div>
+</main>
+
+
+
+
+<%- include('partials/footer') %>
